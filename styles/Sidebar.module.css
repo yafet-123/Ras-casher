@@ -1,0 +1,135 @@
+.sidebar {
+  position:fixed;
+  width: 200px;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  height: 100vh;
+  background-color: white;
+  padding-top:20px ;
+}
+.top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6439ff;
+}
+
+.horizontal{
+  height: 0;
+  border: 1.3px solid rgb(230, 227, 227);
+}
+
+.center{
+    padding-left: 10px;
+}
+
+.ullist{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.list:hover{
+  background-color: #ece8ff;
+}
+.icon {
+  font-size: 18px;
+  color: #7451f8;
+}
+.spanstyle{
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  margin-left: 10px;
+  
+}
+
+.bottom{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.colorOption{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #7451f8;
+  cursor: pointer;
+  margin: 5px;
+}
+.colorOption:nth-child(1){
+      background-color: whitesmoke;
+  }
+  .colorOption:nth-child(2){
+      background-color: #333;
+  }
+  .colorOption:nth-child(3){
+      background-color: darkblue;
+  }
+
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+.dropdown input{
+  display: none;
+}
+.dropdown input ~ ul{
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  top: -10px;
+  display: none;
+  z-index: 1;
+  list-style-type: none;
+}
+.dropdown input:checked + label{
+  font-weight: bold;
+}
+
+
+/* list input:checked ~ ul */ 
+.dropdown input:checked + label + ul {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  top: 0;
+}
+
+.dropdownlist{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.dropdownlist:hover{
+  background-color: #ece8ff;
+}
+
+.dropdownlist:active{
+  background-color: red;
+}
